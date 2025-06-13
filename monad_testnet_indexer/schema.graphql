@@ -139,3 +139,4 @@ type MonadRaffle_Transfer {
   to: String!
   tokenId: BigInt!
 }
+
