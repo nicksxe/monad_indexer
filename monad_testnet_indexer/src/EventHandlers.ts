@@ -5,7 +5,6 @@ import {
   MonadexFactory,
   MonadexFactory_PoolCreated,
   Pair,
-  Pair_Approval,
   Pair_Initialised,
   Pair_LiquidityAdded,
   Pair_LiquidityRemoved,
@@ -35,18 +34,6 @@ MonadexFactory.PoolCreated.handler(async ({ event, context }) => {
   };
 
   context.MonadexFactory_PoolCreated.set(entity);
-});
-
-
-Pair.Approval.handler(async ({ event, context }) => {
-  const entity: Pair_Approval = {
-    id: `${event.chainId}_${event.block.number}_${event.logIndex}`,
-    owner: event.params.owner,
-    spender: event.params.spender,
-    amount: event.params.amount,
-  };
-
-  context.Pair_Approval.set(entity);
 });
 
 Pair.Initialised.handler(async ({ event, context }) => {
@@ -97,17 +84,6 @@ Pair.ReservesUpdated.handler(async ({ event, context }) => {
   context.Pair_ReservesUpdated.set(entity);
 });
 
-Pair.Transfer.handler(async ({ event, context }) => {
-  const entity: Pair_Transfer = {
-    id: `${event.chainId}_${event.block.number}_${event.logIndex}`,
-    from: event.params.from,
-    to: event.params.to,
-    amount: event.params.amount,
-  };
-
-  context.Pair_Transfer.set(entity);
-});
-// TODO add MonadRaffle
 
 MonadRaffle.OwnershipTransferred.handler(async ({ event, context }) => {
   const entity: MonadRaffle_OwnershipTransferred = {

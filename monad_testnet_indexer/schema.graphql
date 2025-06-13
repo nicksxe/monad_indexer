@@ -15,13 +15,6 @@ type Pair_AmountSwapped {
   _receiver: String!
 }
 
-type Pair_Approval {
-  id: ID!
-  owner: String!
-  spender: String!
-  amount: BigInt!
-}
-
 type Pair_Initialised {
   id: ID!
   tokenA: String!
@@ -76,13 +69,6 @@ type MonadRaffle_Approval {
   tokenId: BigInt!
 }
 
-type MonadRaffle_ApprovalForAll {
-  id: ID!
-  owner: String!
-  operator: String!
-  approved: Boolean!
-}
-
 type MonadRaffle_EnteredRaffle {
   id: ID!
   receiver: String!
@@ -112,30 +98,4 @@ type MonadRaffle_OwnershipTransferred {
   id: ID!
   previousOwner: String!
   newOwner: String!
-}
-
-type MonadRaffle_TierWinningsClaimed {
-  id: ID!
-  claim_0: BigInt!
-  claim_1: BigInt!
-  claim_2: BigInt!
-}
-
-type MonadRaffle_TokenRemoved {
-  id: ID!
-  token: String!
-}
-
-type MonadRaffle_TokenSupported {
-  id: ID!
-  _token: String!
-  priceFeedConfig_0: String!
-  priceFeedConfig_1: BigInt!
-}
-
-type MonadRaffle_Transfer {
-  id: ID!
-  from: String!
-  to: String!
-  tokenId: BigInt!
 }
