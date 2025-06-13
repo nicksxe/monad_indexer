@@ -14,12 +14,10 @@ networks:
   - name: Pair
     handler: src/EventHandlers.ts
     events:
-    - event: Approval(address indexed owner, address indexed spender, uint256 amount)
     - event: Initialised(address indexed tokenA, address indexed tokenB)
     - event: LiquidityAdded(address indexed by, address indexed receiver, uint256 amountA, uint256 amountB, uint256 indexed lpTokensMinted)
     - event: LiquidityRemoved(address indexed by, address indexed receiver, uint256 amountA, uint256 amountB, uint256 indexed lpTokensBurned)
     - event: ReservesUpdated(uint256 indexed reserveA, uint256 indexed reserveB)
-    - event: Transfer(address indexed from, address indexed to, uint256 amount)
   - name: MonadRaffle
     address:
     - 0x8e9Ee594125019cb0a658df98809F8AB8aD41F45

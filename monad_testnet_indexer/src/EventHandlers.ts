@@ -9,7 +9,6 @@ import {
   Pair_LiquidityAdded,
   Pair_LiquidityRemoved,
   Pair_ReservesUpdated,
-  Pair_Transfer,
   MonadRaffle,
   MonadRaffle_OwnershipTransferred,
   MonadRaffle_EpochEnded,

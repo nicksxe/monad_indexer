@@ -53,14 +53,6 @@ type Pair_ReservesUpdated {
   reserveB: BigInt!
 }
 
-type Pair_Transfer {
-  id: ID!
-  from: String!
-  to: String!
-  amount: BigInt!
-}
-
-
 #Monad Raffle
 type MonadRaffle_Approval {
   id: ID!
